@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Лаб.Раб №1</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	</head>
+		<body>
+			<h1>Решение квадратного уравнения</h1>
+			<div id="textStyle">
+	<p>Уравнение вида a⋅x<sup>2</sup> + b⋅x + c = 0 - <strong>квадратное уравнение.</strong></p>
+	<p>a, b, c - действительные числа, a ≠ 0.<br>
+	<p>Для того чтобы вычислить корни квадратного уравнения, нужно сначала найти <strong>дискриминант.</strong><br></p>
+	<p>D = b<sup>2</sup> - 4⋅a⋅c;<br></p>
+		<menu>
+				<li>если D < 0, то квадратное уравнение не имеет корней;</li>
+				<li>если D = 0, то уравнение имеет один действительный корень(иногда говорят, что корней два, но они одинаковые):<u>
+				x1 = x2 = -b / (2⋅a);</u></li>
+				<li>если D > 0, то уравнение имеет два действительных корня:<u>
+					x1 = (-b + √D) / (2⋅a);
+				x2 = (-b + √D) / (2⋅a).</u></li>
+		</menu>
+			</div>
+
+			<h2>Код на Pascal</h2>
+			<div id ="codeStyle">
+			<pre><code>
+			{$CODEPAGE UTF8}
+			program QuadraticEquation;
+			var
+			  a, b, c, x1, x2, discriminant : real;
+			begin
+			  {ввыод данных}
+			  write('a = ');
+			  readln(a);
+			  write('b = ');
+			  readln(b);
+			  write('c = ');
+			  readln(c);
+			  
+			  {дискриминант}
+			  discriminant := sqr(b) - 4 * a * c;  
+			
+			  if discriminant < 0 then
+			    writeln('Квадратное уравнение не имеет корней')
+			  else
+			    begin
+			      if discriminant = 0 then
+			        begin
+			          {квадратное уравнение имеет два одинаковых корня}
+			          x1 := -b / (2 * a);
+			          x2 := x1;
+			        end
+			       else
+			         begin
+			           {уравнение имеет два разных корня}
+			           x1 := (-b + sqrt(discriminant)) / (2 * a);
+			           x2 := (-b - sqrt(discriminant)) / (2 * a);
+			         end;
+			       
+			       {вывод корней уравнения}
+			       writeln('x1 = ', x1:8:3);
+			       writeln('x2 = ', x2:8:3);
+			     end;
+			  writeln('Press Enter to Exit...');
+			  readln;
+				end.
+			</code></pre>
+		</div>
+		<h2>Код на C++</h2>
+
+		<div id ="codeTwo">
+			<pre><code>
+			#include <iostream>
+			#include <cmath>
+			using namespace std;
+			
+			int main()
+			{
+			    double a;
+			    double b;
+			    double c;
+			    double x;
+			    cout << "Введите значение a: ";
+			    cin >> a;
+			    cout << "Введите значение b: ";
+			    cin >> b;
+			    cout << "Введите значение c: ";
+			    cin >> c;
+			    if((b*b - 4*a*c) >= 0) //Если дискриминант больше или равен 0
+			    {
+			        x = ( -1*b + sqrt(b*b - 4*a*c) ) / (2 * a);
+			        cout << "Первый корень равен " << x << endl;
+			        x = ( -1*b - sqrt(b*b - 4*a*c) ) / (2 * a);
+			        cout << "Второй корень равен " << x << endl;
+			    }
+			    else
+			    {
+			        cout << "Дискриминант меньше 0, корни невещественные." << endl;
+			    }
+			
+			    return 0;
+			}
+			</code></pre>
+			</div>
+		</body>
+</html>

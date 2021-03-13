@@ -1,0 +1,55 @@
+html{
+
+	  background: url(../img/phone.jpg);
+    background-size: 100% 100%;
+    background-repeat: repeat;
+}
+h1, h2{
+	font-size: 35px;
+	font-weight: 600px;
+	font-style: italic;
+	color: orange;
+	margin-left: 360px;
+}
+
+#textStyle {
+	font-size:20px;
+	font-weight: normal;
+	color:#ffffff;
+	text-transform:capitalize;
+	word-spacing:4px;
+	letter-spacing:1px;
+	line-height:120%;
+	}
+
+#codeStyle {
+		border: 5px solid silver; /* solid dotted dashed double groove ridge inset outset*/
+		border-top:3px groove gold; 
+		height:680px;
+		width: 780px;
+		margin-top: 20px; /*верхний внешний отступ*/
+		margin-left: 20px; /*левый внешний отступ*/
+		margin-right: 300px; /*правый внешний отступ*/
+		padding-top: 5px; /*верхний внутренний отступ*/
+		padding-left: 6px; /*левый внутренний отступ*/
+		padding-right: 20px; /*правый внутренний отступ*/
+		padding-bottom: 5px; /*нижний внутренний отступ*/
+		border-radius:20px;
+		background-color:grey ;
+}
+
+#codeTwo {
+		border: 5px solid silver; /* solid dotted dashed double groove ridge inset outset*/
+		border-top:3px groove gold; 
+		height:480px;
+		width: 780px;
+		margin-top: 20px; /*верхний внешний отступ*/
+		margin-left: 20px; /*левый внешний отступ*/
+		margin-right: 300px; /*правый внешний отступ*/
+		padding-top: 5px; /*верхний внутренний отступ*/
+		padding-left: 6px; /*левый внутренний отступ*/
+		padding-right: 20px; /*правый внутренний отступ*/
+		padding-bottom: 5px; /*нижний внутренний отступ*/
+		border-radius:20px;
+		background-color:grey ;
+}
