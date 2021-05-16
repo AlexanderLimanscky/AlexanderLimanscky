@@ -1,0 +1,31 @@
+.cards {
+ 
+   min-height: 100vh
+ 
+}
+.cards {
+ 
+  display: flex;
+	align-items: flex-start; 
+	justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 -5px;
+ 
+}
+.card {
+ margin: 0 5px;
+  flex: 0 0 250px
+ 
+}
+.cards header {
+	background-color: grey;
+}
+.cards  ul {
+	background-color: rgb(199, 194, 194);
+}
+
+.cards button {
+	width: 100px;
+	height: 20px;
+	border-radius: 4px;
+}
